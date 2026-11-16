@@ -13,6 +13,10 @@ function color(text: string, code: number): string {
 async function download(url: string): Promise<{ bytes: number; duration: number }> {
   const startedAt = performance.now();
   const response = await fetch(url, {
+    headers: {
+      "Cache-Control": "no-cache, no-store, max-age=0",
+      Pragma: "no-cache",
+    },
     signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
   });
 
