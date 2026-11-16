@@ -2,9 +2,10 @@
   "name": "internet-speed-test",
   "version": "1.0.0",
   "private": true,
-  "description": "A simple sequential download speed test CLI",
+  "description": "A parallel download speed test CLI",
   "scripts": {
     "start": "tsx speed-test.ts",
+    "test": "tsx --test test/*.test.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
